@@ -18,6 +18,9 @@ import {
   SiGitlab,
   SiPostman,
   SiVercel,
+  SiNestjs,
+  SiPostgresql,
+  SiClerk,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import type { IconType } from "react-icons";
@@ -34,10 +37,19 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/brijesh-bhatt-a811a4215/",
   resume: "/BrijeshBhatt-Resume.pdf",
   tagline:
-    "Building scalable full-stack applications with React, Node.js, TypeScript, MongoDB and MySQL.",
+    "Building scalable full-stack applications with React, Node.js, TypeScript, MongoDB, MySQL and PostgreSQL..",
   summary:
-    "MERN Stack Developer with 3 years of experience, currently at MethodHub. I architect scalable web platforms end-to-end — from snappy React/Next.js front-ends to performant Node.js APIs and well-tuned MySQL/MongoDB schemas.",
-  specialties: ["React.js", "Next.js", "Node.js", "TypeScript", "MongoDB", "MySQL"],
+    "MERN Stack Developer with 3 years of experience, currently at MethodHub. I architect scalable web platforms end-to-end — from snappy React/Next.js front-ends to performant Node.js APIs and well-tuned MySQL/MongoDB/PostgreSQL schemas.",
+  specialties: [
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "NestJS",
+    "TypeScript",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+  ],
 };
 
 export type Skill = { name: string; icon: IconType; level: number; color: string };
@@ -61,10 +73,12 @@ export const skillGroups: SkillGroup[] = [
     title: "Backend",
     items: [
       { name: "Node.js", icon: SiNodedotjs, level: 90, color: "#339933" },
+      { name: "NestJS", icon: SiNestjs, level: 85, color: "#E0234E" },
       { name: "Express.js", icon: SiExpress, level: 90, color: "#ffffff" },
       { name: "REST APIs", icon: SiNodedotjs, level: 92, color: "#10B981" },
       { name: "JWT Auth", icon: SiJsonwebtokens, level: 86, color: "#FB015B" },
       { name: "Firebase", icon: SiFirebase, level: 78, color: "#FFCA28" },
+      { name: "Clerk", icon: SiClerk, level: 78, color: "#FFCA28" },
     ],
   },
   {
@@ -72,6 +86,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       { name: "MongoDB", icon: SiMongodb, level: 88, color: "#47A248" },
       { name: "MySQL", icon: SiMysql, level: 90, color: "#4479A1" },
+      { name: "PostgreSQL", icon: SiPostgresql, level: 85, color: "#336791" },
     ],
   },
   {

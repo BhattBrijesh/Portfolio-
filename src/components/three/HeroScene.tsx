@@ -32,7 +32,10 @@ export function HeroScene() {
       mx.set(x * 2 - 1);
       my.set(y * 2 - 1);
     };
-    const onLeave = () => { mx.set(0); my.set(0); };
+    const onLeave = () => {
+      mx.set(0);
+      my.set(0);
+    };
     el.addEventListener("mousemove", onMove);
     el.addEventListener("mouseleave", onLeave);
     return () => {
@@ -42,16 +45,25 @@ export function HeroScene() {
   }, [mx, my]);
 
   const badges = [
-    { label: "React", x: "8%", y: "12%", delay: 0 },
-    { label: "Node.js", x: "78%", y: "8%", delay: 0.15 },
-    { label: "TypeScript", x: "82%", y: "70%", delay: 0.3 },
-    { label: "MongoDB", x: "4%", y: "62%", delay: 0.45 },
-    { label: "MySQL", x: "46%", y: "88%", delay: 0.6 },
-    { label: "Next.js", x: "60%", y: "4%", delay: 0.75 },
+    { label: "React", x: "15%", y: "25%", delay: 0 },
+    { label: "Node.js", x: "70%", y: "20%", delay: 0.15 },
+    { label: "TypeScript", x: "78%", y: "60%", delay: 0.3 },
+    { label: "MongoDB", x: "20%", y: "55%", delay: 0.45 },
+    { label: "MySQL", x: "45%", y: "75%", delay: 0.6 },
+    { label: "Next.js", x: "55%", y: "15%", delay: 0.75 },
+    { label: "NestJS", x: "30%", y: "70%", delay: 0.9 },
+    { label: "PostgreSQL", x: "65%", y: "70%", delay: 1.05 },
+    { label: "Clerk", x: "25%", y: "40%", delay: 1.2 },
+    { label: "Tailwind", x: "82%", y: "45%", delay: 1.35 },
+    { label: "AWS", x: "45%", y: "20%", delay: 1.5 },
   ];
 
   return (
-    <div ref={ref} className="relative h-full w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0a0f24] via-[#0b1230] to-[#120a2a]" style={{ perspective: 1200 }}>
+    <div
+      ref={ref}
+      className="relative h-full w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0a0f24] via-[#0b1230] to-[#120a2a]"
+      style={{ perspective: 1200 }}
+    >
       {/* starfield */}
       <div className="absolute inset-0 opacity-70">
         {Array.from({ length: 60 }).map((_, i) => (
@@ -140,7 +152,7 @@ export function HeroScene() {
           transition={{
             opacity: { duration: 0.6, delay: b.delay },
             scale: { duration: 0.6, delay: b.delay },
-            y: { duration: 4 + (b.delay * 2), repeat: Infinity, ease: "easeInOut", delay: b.delay },
+            y: { duration: 4 + b.delay * 2, repeat: Infinity, ease: "easeInOut", delay: b.delay },
           }}
           whileHover={{ scale: 1.15, borderColor: "rgba(124,140,255,0.6)" }}
         >
